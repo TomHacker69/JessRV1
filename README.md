@@ -72,35 +72,6 @@ firmware/
 
 ---
 
-## Quick Start
-
-### 1. Flash the Firmware
-
-**Rover Controller (ESP32):**
-1. Open `firmware/rover_controller/rover_controller.ino` in Arduino IDE
-2. Set your hotspot SSID/password
-3. Flash to your ESP32
-4. Wire motors per the pin comments in the file
-
-**Camera (ESP32-CAM AI Thinker):**
-1. Open `firmware/esp32_cam/esp32_cam.ino`
-2. Set the same hotspot SSID/password
-3. Flash via FTDI adapter (GPIO 0 to GND during flash)
-4. The stream will be at `http://cam.local/stream`
-
-### 2. Build the Flutter App
-
-```bash
-# Install dependencies
-flutter pub get
-
-# Run on connected Android device
-flutter run
-
-# Build release APK
-flutter build apk --release
-# APK at: build/app/outputs/flutter-apk/app-release.apk
-```
 
 ### 3. Network Setup
 
@@ -222,16 +193,3 @@ Camera stream: `http://cam.local/stream` (MJPEG)
 
 ---
 
-## Pinout Reference (Rover ESP32)
-
-| Signal | GPIO |
-|--------|------|
-| L_IN1 | 26 |
-| L_IN2 | 27 |
-| R_IN1 | 14 |
-| R_IN2 | 12 |
-| L_EN (PWM) | 25 |
-| R_EN (PWM) | 33 |
-| Servo | 13 |
-
-Adjust to match your motor driver wiring.
